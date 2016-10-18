@@ -20,7 +20,7 @@ module.exports = React.createClass({
   getInitialState: _ => ({items}),
   scoreChanged: function(item) {
     console.log(items)
-    this.setState({items})
+    this.setState({items: this.state.items})
   },
   addNewsItem: function (newItem) {
     this.setState({

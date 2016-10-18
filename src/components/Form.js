@@ -25,25 +25,26 @@ module.exports = React.createClass({
   },
 
   render: function ()  {
- return (
-    h('section.form', [
-  h('h2.f4.white', 'Add News'),
-  h('form', { onSubmit: this.submit} ,[
-    h('div.pb2', [
-      h('label.mr1', 'Title'),
-      h('input', {
-        onChange: this.setTitle,
-        value: this.state.title } )
-    ]),
-    h('div.pb2', [
-      h('label.mr1', 'Link'),
-      h('input', {
-        onChange: this.setLink,
-        value: this.state.link })
-    ]),
-    h('div', [
-      h('button', 'Add News')
-    ])
-  ])
-]))}
+    return (
+      h('section.form', [
+        h('h2.f4.white', 'Add News'),
+        h('form', { onSubmit: this.submit} ,[
+          h('div.pb2', [
+            h('label.mr1', 'Title'),
+            h('input', {
+              onChange: this.setTitle,
+              value: this.state.title } )
+            ]),
+          h('div.pb2', [
+            h('label.mr1', 'Link'),
+            h('input', {
+              onChange: this.setLink,
+              value: this.state.link })
+            ]),
+            h('div', [
+              h('button', 'Add News')
+            ])
+          ])
+])
+)}
 })
