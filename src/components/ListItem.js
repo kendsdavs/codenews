@@ -13,10 +13,14 @@ const ListItem = React.createClass({
   },
   render: function() {
     const item = this.props.item
-   return h('li', [
+   return h('li.pa1', [
         h('a', {href: item.link}, item.title),
-        h('button', { onClick: this.onUp } ,'Up'),
-        h('button', { onClick: this.onDown }, 'Down'),
+        h('button.f6.link.dim.br2.ph3.pv2.mb2.dib.white.bg-hot-pink', { onClick: this.onUp } , [
+          h('i.fa.fa-thumbs-up')
+        ]),
+        h('button.f6.link.dim.br2.ph3.pv2.mb2.dib.white.bg-hot-pink', { onClick: this.onDown }, [
+          h('i.fa.fa-thumbs-down')
+        ]),
         h('span', item.score)
       ])
     }
